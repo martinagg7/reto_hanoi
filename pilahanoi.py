@@ -4,7 +4,9 @@ class NodoPila:
     def __init__(self, numero_de_discos):
         self.numero_de_discos = numero_de_discos
         self.siguiente = None 
-
+        
+"Clase Pila"
+"Explicacion: La clase Pila debe tener una referencia a la cima de la pila y un contador de la altura de los discos que se van almacenando."
 class Pila:
     def __init__(self):
         self.cima = None 
