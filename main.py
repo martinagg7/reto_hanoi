@@ -1,15 +1,15 @@
 from pilahanoi import *
 
 def getTablero(n):
-    pila_palo1 = Pila()
-    pila_palo2 = Pila()
-    pila_palo3 = Pila()
+    pila_torre1 = Pila()
+    pila_torre2 = Pila()
+    pila_torre3 = Pila()
 
     #metemos los discos con los que vamos a jugar en el palo incial pero de mayor a menor
     for disco in range(n, 0, -1):
-        pila_palo1.push(disco)
+        pila_torre1.push(disco)
 
-    return (pila_palo1, pila_palo2, pila_palo3)
+    return (pila_torre1, pila_torre2, pila_torre3)
 
 def solve(tablero, n, inicial, auxiliar, final):
     if n == 1:
@@ -26,23 +26,23 @@ def solve(tablero, n, inicial, auxiliar, final):
         final.push(disco)
         print("Disco", disco, "de Torre", inicial, "a Torre", final)
 
-        # Mover n-1 discos de auxiliar a final usando el palo inicial como ayuda
+        # movemos los discos de auxiliar a final usando el palo inicial como ayuda
         solve(tablero, n - 1, auxiliar, inicial , final)
 
 if __name__ == "__main":
-    n = 5  # Cantidad de discos
+    n = 5  
     tablero = getTablero(n)
     torre1, torre2, torre3 = tablero
 
-    print("Estado inicial del tablero:")
-    print(f"Torre 1: {torre1}")
-    print(f"Torre 2: {torre2}")
-    print(f"Torre 3: {torre3}")
+    print("Incialmente:")
+    print("Torre 1",torre1)
+    print("Torre 2",torre2)
+    print("Torre 3",torre3)
 
-    print("\nResolviendo el problema de las Torres de Hanoi:")
+    print("Resolviendo...:")
     solve(tablero, n, torre1, torre2, torre3)
 
-    print("\nEstado final del tablero:")
-    print(f"Torre 1: {torre1}")
-    print(f"Torre 2: {torre2}")
-    print(f"Torre 3: {torre3}")
+    print("Listo!:")
+    print("Torre 1",torre1)
+    print("Torre 2",torre2)
+    print("Torre 3",torre3)
