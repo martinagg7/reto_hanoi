@@ -3,7 +3,7 @@ class NodoPila:
     "ATRIBUTOS DE LA CLASE NODOPILA"
     def __init__(self,numero_discos):
         self.numero_discos = numero_discos
-        self.siguiente = None #sirve para unir los nodos
+        self.siguiente = None 
 
 "Clase Pila"
 class Pila:
