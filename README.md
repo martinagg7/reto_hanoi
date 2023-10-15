@@ -1,7 +1,7 @@
 # reto_hanoi
 
     nombre_usuario:martinagg7
-    linK repo:
+    linK repo:https://github.com/martinagg7/reto_hanoi.git
 
 # Recursos
   Resolución del problema planteado de Hanoi ,definiendo las clases NodiPila y Pila con sus respectivos mmétodos y atributos.
